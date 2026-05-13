@@ -1,20 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
-  --color-sabeer-primary: #00BFFF;
-  --color-sabeer-bg: #FFFFFF;
-  --color-sabeer-surface: #F8FAFC;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-sabeer-primary: #007AFF;
+  --color-sabeer-bg: #000000;
+  --color-sabeer-surface: #0A0A0A;
+  --color-sabeer-accent: #00D1FF;
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-sabeer-bg);
-  color: #0F172A;
-  overflow-x: hidden;
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-sabeer-bg);
+    color: #F5F5F7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px rgba(0, 122, 255, 0.5);
+  }
+
+  .bg-grid-white {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .animate-reveal {
+    animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
