@@ -1,102 +1,115 @@
 import { motion } from 'motion/react';
-import { BrainCircuit, Cpu, Globe, Rocket, ShieldCheck, Sparkles } from 'lucide-react';
+import { Shield, Sparkles, Zap, Brain, Layers, Globe } from 'lucide-react';
+
+const bentoItems = [
+  {
+    title: "AI Excellence",
+    description: "Architecting deep-learning systems that redefine human-machine interaction.",
+    icon: <Brain className="text-sabeer-primary" size={24} />,
+    className: "md:col-span-2 md:row-span-2 bg-gradient-to-br from-sabeer-primary/10 to-transparent",
+    visual: (
+      <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+        <div className="w-64 h-64 border border-sabeer-primary/30 rounded-full animate-ping" />
+        <div className="absolute w-48 h-48 border border-sabeer-primary/50 rounded-full animate-pulse" />
+      </div>
+    )
+  },
+  {
+    title: "Systemic Vision",
+    description: "Future-ready digital structures built on core principles of excellence.",
+    icon: <Sparkles className="text-sabeer-accent" size={24} />,
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    title: "Global Scale",
+    description: "High-performance infrastructure optimized for the modern web.",
+    icon: <Globe className="text-blue-400" size={24} />,
+    className: "md:col-span-1 md:row-span-1",
+  },
+  {
+    title: "Elite Engineering",
+    description: "Crafting bulletproof code with Next-gen React and AI protocols.",
+    icon: <Layers className="text-purple-400" size={24} />,
+    className: "md:col-span-1 md:row-span-2",
+    visual: (
+      <div className="mt-8 space-y-2 opacity-50">
+        <div className="h-2 w-full bg-white/10 rounded-full" />
+        <div className="h-2 w-4/5 bg-white/10 rounded-full" />
+        <div className="h-2 w-3/4 bg-sabeer-primary/30 rounded-full" />
+      </div>
+    )
+  },
+  {
+    title: "Instant Impact",
+    description: "Deploying innovation at the speed of thought.",
+    icon: <Zap className="text-yellow-400" size={24} />,
+    className: "md:col-span-2 md:row-span-1",
+  },
+  {
+    title: "Security Protocol",
+    description: "Enterprise-grade safety for the next generation of data.",
+    icon: <Shield className="text-green-400" size={24} />,
+    className: "md:col-span-1 md:row-span-1",
+  }
+];
 
 export default function About() {
-  const pillars = [
-    {
-      icon: <BrainCircuit size={28} className="text-sabeer-accent" />,
-      title: "AI Core",
-      description: "Intelligent systems integrated into the foundation of every product we build."
-    },
-    {
-      icon: <Globe size={28} className="text-sabeer-accent" />,
-      title: "Global Reach",
-      description: "A borderless innovation hub serving a worldwide community of creators."
-    },
-    {
-      icon: <Cpu size={28} className="text-sabeer-accent" />,
-      title: "System Thinking",
-      description: "Engineering robust, scalable architectures for the next generation of web."
-    },
-    {
-      icon: <ShieldCheck size={28} className="text-sabeer-accent" />,
-      title: "Secure Future",
-      description: "Ensuring privacy and security in an increasingly AI-driven digital landscape."
-    }
-  ];
-
   return (
-    <section id="about" className="py-32 bg-sabeer-bg relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-
+    <section id="about" className="py-32 relative bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1 }}
-          >
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div className="h-[1px] w-8 bg-sabeer-primary" />
-              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-sabeer-primary">The Vision</span>
-            </div>
-
-            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 text-white uppercase leading-[0.9]">
-              Redefining <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Digital Intelligence</span>
-            </h2>
-            
-            <div className="space-y-6 text-gray-400 text-lg font-medium leading-relaxed">
-              <p>
-                Sabeer Verse is more than a technology company; it is a futuristic digital innovation ecosystem. We are building the bridge between human ingenuity and artificial intelligence.
-              </p>
-              <p>
-                Focused on AI systems, high-performance web engineering, and immersive product experiences, we aim to deliver solutions that are not just functional, but transformative.
-              </p>
-            </div>
-
-            <div className="mt-12 grid grid-cols-2 gap-8">
-              <div className="p-6 glass rounded-3xl border border-white/5">
-                <div className="text-3xl font-black text-white mb-1">01.</div>
-                <div className="text-xs uppercase tracking-widest text-sabeer-primary font-bold">Innovation</div>
-              </div>
-              <div className="p-6 glass rounded-3xl border border-white/5">
-                <div className="text-3xl font-black text-white mb-1">02.</div>
-                <div className="text-xs uppercase tracking-widest text-sabeer-primary font-bold">Excellence</div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+        <div className="text-center mb-24">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            className="text-sm font-black uppercase tracking-[0.5em] text-sabeer-primary mb-6"
           >
-            {pillars.map((pillar, index) => (
-              <div 
-                key={index} 
-                className="group relative glass p-8 rounded-[2.5rem] border border-white/5 hover:border-sabeer-primary/50 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-20 transition-opacity">
-                  <Sparkles size={64} className="text-white" />
-                </div>
+            The Ecosystem
+          </motion.h2>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-6xl font-extrabold tracking-tighter text-white uppercase mb-8"
+          >
+            Redefining the <br /> Digital Frontier
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-gray-400 max-w-2xl mx-auto font-medium"
+          >
+            Sabeer Verse is more than a platform. It's a visionary laboratory dedicated to the convergence of artificial intelligence and world-class digital engineering.
+          </motion.p>
+        </div>
 
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-sabeer-primary/20 transition-colors">
-                  {pillar.icon}
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 auto-rows-[240px]">
+          {bentoItems.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className={`group relative glass p-8 rounded-[2.5rem] border border-white/5 overflow-hidden hover:border-white/20 transition-all duration-500 flex flex-col justify-between ${item.className}`}
+            >
+              <div className="relative z-10">
+                <div className="mb-6 p-3 w-fit rounded-2xl bg-white/5 border border-white/10 group-hover:scale-110 transition-transform duration-500">
+                  {item.icon}
                 </div>
-                <h3 className="text-xl font-black uppercase tracking-tight mb-3 text-white">{pillar.title}</h3>
-                <p className="text-gray-500 text-sm font-medium leading-relaxed">{pillar.description}</p>
-
-                <div className="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-sabeer-primary opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
-                  Protocol Active <Rocket size={12} />
-                </div>
+                <h4 className="text-2xl font-bold text-white mb-3 tracking-tight">{item.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-[200px]">
+                  {item.description}
+                </p>
               </div>
-            ))}
-          </motion.div>
+
+              {item.visual && item.visual}
+
+              {/* Hover Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
