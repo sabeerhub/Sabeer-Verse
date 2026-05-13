@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Sparkles } from 'lucide-react';
 import { useState, type FormEvent } from 'react';
 
 export default function Contact() {
@@ -45,127 +45,118 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-sabeer-surface relative" aria-labelledby="contact-heading">
+    <section id="contact" className="py-32 bg-sabeer-bg relative overflow-hidden" aria-labelledby="contact-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
           >
-            <h2 id="contact-heading" className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 text-slate-900">
-              Get in <span className="text-sabeer-primary">Touch</span>
+            <div className="inline-flex items-center gap-2 mb-8">
+              <div className="h-[1px] w-8 bg-sabeer-primary" />
+              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-sabeer-primary">Contact Protocol</span>
+            </div>
+
+            <h2 id="contact-heading" className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white uppercase leading-[0.9] mb-10">
+              Let's Build <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sabeer-primary to-sabeer-accent">The Future</span>
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed mb-12 font-light">
-              Ready to build the future? Whether you're a developer, creator, or business looking to integrate AI, we're here to help.
+
+            <p className="text-gray-400 text-lg font-medium leading-relaxed mb-12 max-w-md">
+              Whether you're looking for AI solutions, high-end web systems, or a visionary partnership, our doors are always open.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 bg-white border border-slate-200 shadow-sm rounded-2xl flex items-center justify-center group-hover:border-sabeer-primary/50 transition-colors" aria-hidden="true">
-                  <Mail className="text-sabeer-primary" />
+            <div className="space-y-6">
+              {[
+                { icon: <Mail size={20} />, label: 'Email', value: 'sabeerverse@gmail.com', href: 'mailto:sabeerverse@gmail.com' },
+                { icon: <MapPin size={20} />, label: 'Base', value: 'Global (Remote-First)' },
+                { icon: <Phone size={20} />, label: 'Comm', value: '+1 (234) 567-890', href: 'tel:+1234567890' }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-6 group">
+                  <div className="w-14 h-14 glass rounded-2xl flex items-center justify-center text-sabeer-primary group-hover:scale-110 group-hover:bg-sabeer-primary group-hover:text-white transition-all duration-300">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1">{item.label}</h4>
+                    {item.href ? (
+                      <a href={item.href} className="text-xl font-bold text-white hover:text-sabeer-primary transition-colors">{item.value}</a>
+                    ) : (
+                      <p className="text-xl font-bold text-white">{item.value}</p>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-1">Email Us</h4>
-                  <a href="mailto:sabeerverse@gmail.com" className="text-xl font-medium text-slate-900 hover:text-sabeer-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sabeer-primary rounded-md px-1 -ml-1">sabeerverse@gmail.com</a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 bg-white border border-slate-200 shadow-sm rounded-2xl flex items-center justify-center group-hover:border-sabeer-primary/50 transition-colors" aria-hidden="true">
-                  <MapPin className="text-sabeer-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-1">Location</h4>
-                  <p className="text-xl font-medium text-slate-900">Global (Remote-First)</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 bg-white border border-slate-200 shadow-sm rounded-2xl flex items-center justify-center group-hover:border-sabeer-primary/50 transition-colors" aria-hidden="true">
-                  <Phone className="text-sabeer-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-1">Call Us</h4>
-                  <a href="tel:+1234567890" className="text-xl font-medium text-slate-900 hover:text-sabeer-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sabeer-primary rounded-md px-1 -ml-1">+1 (234) 567-890</a>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-xl"
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative"
           >
-            <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-              <div>
-                <label htmlFor="name" className="block text-sm font-bold uppercase tracking-widest text-slate-600 mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  required
-                  aria-required="true"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sabeer-primary focus:border-transparent transition-colors"
-                  placeholder="John Doe"
-                />
+            <div className="absolute -inset-4 bg-gradient-to-r from-sabeer-primary/20 to-sabeer-accent/20 rounded-[3rem] blur-2xl opacity-50" />
+
+            <form onSubmit={handleSubmit} className="relative glass p-10 md:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl space-y-8" aria-label="Contact form">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <label htmlFor="name" className="block text-[10px] font-black uppercase tracking-widest text-gray-500">Subject Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-sabeer-primary transition-all font-medium"
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <label htmlFor="email" className="block text-[10px] font-black uppercase tracking-widest text-gray-500">Comm Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-sabeer-primary transition-all font-medium"
+                    placeholder="john@example.com"
+                  />
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-bold uppercase tracking-widest text-slate-600 mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  aria-required="true"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sabeer-primary focus:border-transparent transition-colors"
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-bold uppercase tracking-widest text-slate-600 mb-2">Message</label>
+              <div className="space-y-3">
+                <label htmlFor="message" className="block text-[10px] font-black uppercase tracking-widest text-gray-500">Transmission Data</label>
                 <textarea
                   id="message"
                   required
-                  aria-required="true"
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sabeer-primary focus:border-transparent transition-colors resize-none"
-                  placeholder="How can we help you?"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-sabeer-primary transition-all font-medium resize-none"
+                  placeholder="Describe your vision..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                aria-live="polite"
-                className={`w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-bold uppercase tracking-wider overflow-hidden rounded-xl transition-transform hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sabeer-primary focus-visible:ring-offset-2 ${
-                  error ? 'bg-red-500 shadow-red-500/20' : 'bg-sabeer-primary shadow-sabeer-primary/20'
-                }`}
+                className="w-full group relative inline-flex items-center justify-center gap-3 px-8 py-5 bg-white text-black font-black uppercase tracking-widest rounded-2xl transition-all hover:bg-sabeer-primary hover:text-white disabled:opacity-50 overflow-hidden shadow-2xl shadow-white/5"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  {isSubmitting ? 'Sending...' : submitted ? 'Message Sent!' : error ? 'Error! Try Again' : 'Send Message'}
-                  {!isSubmitting && !submitted && !error && <Send size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />}
+                <span className="relative z-10 flex items-center gap-3">
+                  {isSubmitting ? 'Transmitting...' : submitted ? 'Message Received' : 'Initiate Contact'}
+                  {!isSubmitting && !submitted && <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                 </span>
-                {!error && <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-sabeer-primary opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />}
+                <div className="absolute inset-0 bg-gradient-to-r from-sabeer-primary to-sabeer-accent opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
+
               {submitted && (
-                <p className="text-green-600 text-sm font-medium text-center mt-4">
-                  Thank you! Your message has been sent successfully.
-                </p>
-              )}
-              {error && (
-                <p className="text-red-500 text-sm font-medium text-center mt-4">
-                  Oops! Something went wrong. Please try again later.
+                <p className="text-sabeer-accent text-xs font-black text-center uppercase tracking-widest flex items-center justify-center gap-2">
+                  <Sparkles size={14} /> Transmission successful. We will respond shortly.
                 </p>
               )}
             </form>
