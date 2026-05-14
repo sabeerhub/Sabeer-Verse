@@ -22,7 +22,7 @@ export default function Team() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10" />
               <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
                  <img
-                   src="/IMG-20260423-WA0024.jpg"
+                   src="assets/IMG-20260423-WA0024.jpg"
                    alt="Mustapha Abdulsalam"
                    className="w-full h-full object-cover"
                    onError={(e) => {
