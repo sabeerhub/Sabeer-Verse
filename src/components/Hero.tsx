@@ -3,7 +3,7 @@ import { ArrowRight, ChevronDown, Command, Cpu, Globe, Zap } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sabeer-bg pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sabeer-bg pt-12">
       {/* Background Cinematic Effects */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <div className="absolute inset-0 bg-grid-white opacity-[0.15]" />
@@ -78,7 +78,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass border border-white/10 text-[10px] font-black uppercase tracking-[0.3em] text-sabeer-accent mb-12 shadow-2xl"
+          className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass border border-white/10 text-[10px] font-black uppercase tracking-[0.3em] text-sabeer-accent mb-6 shadow-2xl"
         >
           <Command size={14} />
           Protocol v.4.0 Innovation
@@ -88,7 +88,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.8] mb-10 text-white uppercase"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8 text-white uppercase"
         >
           Building <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sabeer-primary via-white to-sabeer-accent">AI-Powered</span> <br />

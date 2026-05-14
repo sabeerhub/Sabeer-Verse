@@ -21,12 +21,15 @@ export default function Team() {
               {/* This represents a premium cinematic portrait area */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10" />
               <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
-                 <div className="text-white/10 flex flex-col items-center gap-4">
-                    <div className="w-32 h-32 rounded-full border-4 border-white/5 flex items-center justify-center">
-                       <Globe size={64} className="animate-pulse" />
-                    </div>
-                    <span className="text-[10px] font-black uppercase tracking-[0.5em]">Visionary Founder</span>
-                 </div>
+                 <img
+                   src="/IMG-20260423-WA0024.jpg"
+                   alt="Mustapha Abdulsalam"
+                   className="w-full h-full object-cover"
+                   onError={(e) => {
+                     e.currentTarget.src = "/founder.png";
+                   }}
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
               </div>
               
               <div className="absolute bottom-12 left-12 right-12 z-20">
