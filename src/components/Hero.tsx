@@ -1,90 +1,147 @@
 import { motion } from 'motion/react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Command, Cpu, Globe, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sabeer-bg pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sabeer-bg pt-12">
       {/* Background Cinematic Effects */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
-        <div className="absolute inset-0 bg-grid-white opacity-20" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-sabeer-primary/20 rounded-full blur-[120px] opacity-50" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sabeer-accent/10 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
+        <div className="absolute inset-0 bg-grid-white opacity-[0.15]" />
+
+        {/* Animated Radial Glows */}
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 left-1/4 w-[800px] h-[600px] bg-sabeer-primary/20 rounded-full blur-[120px]"
+        />
+        <motion.div
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-sabeer-accent/10 rounded-full blur-[100px]"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Floating UI Elements (Startup Aesthetic) */}
+      <div className="absolute inset-0 z-10 pointer-events-none hidden lg:block">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full glass border border-white/10 text-[11px] font-bold uppercase tracking-[0.2em] text-sabeer-accent mb-10 shadow-2xl shadow-blue-500/10"
+          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
+          transition={{ duration: 5, repeat: Infinity }}
+          className="absolute top-[20%] left-[10%] p-4 glass rounded-2xl border border-white/10 shadow-2xl"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sabeer-accent opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-sabeer-accent"></span>
-          </span>
-          Next-Gen Innovation Ecosystem
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-sabeer-primary/20 flex items-center justify-center">
+              <Cpu size={16} className="text-sabeer-primary" />
+            </div>
+            <div className="space-y-1">
+              <div className="h-1.5 w-12 bg-white/20 rounded-full" />
+              <div className="h-1.5 w-8 bg-white/10 rounded-full" />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 25, 0], x: [0, -15, 0] }}
+          transition={{ duration: 7, repeat: Infinity }}
+          className="absolute bottom-[30%] right-[12%] p-5 glass rounded-3xl border border-white/10 shadow-2xl"
+        >
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-sabeer-accent/20 flex items-center justify-center">
+              <Zap size={20} className="text-sabeer-accent" />
+            </div>
+            <div className="space-y-2">
+              <div className="h-2 w-16 bg-white/20 rounded-full" />
+              <div className="h-2 w-10 bg-white/10 rounded-full" />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-[15%] right-[20%] px-4 py-2 glass rounded-full border border-white/10 flex items-center gap-2"
+        >
+          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+          <span className="text-[10px] font-black uppercase tracking-widest text-white/50">Core System Active</span>
+        </motion.div>
+      </div>
+
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass border border-white/10 text-[10px] font-black uppercase tracking-[0.3em] text-sabeer-accent mb-6 shadow-2xl"
+        >
+          <Command size={14} />
+          Protocol v.4.0 Innovation
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.85] mb-8 text-white uppercase"
+          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8 text-white uppercase"
         >
           Building <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sabeer-primary via-sabeer-accent to-white">AI-Powered</span> <br />
-          Experiences
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sabeer-primary via-white to-sabeer-accent">AI-Powered</span> <br />
+          Ecosystems
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          className="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed"
+          transition={{ duration: 1, delay: 0.4 }}
+          className="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-medium leading-relaxed tracking-tight"
         >
-          Sabeer Verse is a futuristic innovation platform focused on AI, modern web systems, and immersive digital technology.
+          Sabeer Verse is a futuristic innovation platform focused on AI systems, modern web engineering, and immersive digital technology.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-          className="mt-12 flex flex-col sm:flex-row gap-5 justify-center items-center"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mt-14 flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
           <a
             href="#products"
-            className="group relative inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-black font-black uppercase tracking-widest overflow-hidden rounded-full transition-all hover:scale-105 hover:bg-sabeer-primary hover:text-white shadow-2xl shadow-white/5 active:scale-95"
+            className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-white text-black font-black uppercase tracking-[0.2em] overflow-hidden rounded-full transition-all hover:scale-105 hover:bg-sabeer-primary hover:text-white shadow-[0_0_40px_rgba(255,255,255,0.1)] active:scale-95"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Explore Ecosystem <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              Explore Vision <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </span>
           </a>
           
           <a
             href="#labs"
-            className="group relative inline-flex items-center justify-center gap-3 px-10 py-5 glass border border-white/10 text-white font-black uppercase tracking-widest rounded-full transition-all hover:bg-white/5 active:scale-95"
+            className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 glass border border-white/10 text-white font-black uppercase tracking-[0.2em] rounded-full transition-all hover:bg-white/5 active:scale-95"
           >
-            Join Labs
+            Access Labs
           </a>
         </motion.div>
 
-        {/* Animated Metrics */}
+        {/* Startup Credibility Visuals */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-12 border-t border-white/5"
+          className="mt-28 flex flex-wrap justify-center items-center gap-x-16 gap-y-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700"
         >
           {[
-            { label: 'AI Models', value: '12+' },
-            { label: 'Products', value: '08' },
-            { label: 'Uptime', value: '99.9%' },
-            { label: 'Innovation', value: 'Elite' },
-          ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="text-2xl font-black text-white mb-1">{stat.value}</div>
-              <div className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">{stat.label}</div>
+            { icon: <Globe size={18} />, label: 'Global Scale' },
+            { icon: <Cpu size={18} />, label: 'AI Integrated' },
+            { icon: <Zap size={18} />, label: '99.9% Uptime' },
+          ].map((item, i) => (
+            <div key={i} className="flex items-center gap-3 text-white">
+              {item.icon}
+              <span className="text-[10px] font-black uppercase tracking-[0.3em]">{item.label}</span>
             </div>
           ))}
         </motion.div>
@@ -92,14 +149,12 @@ export default function Hero() {
       
       {/* Scroll indicator */}
       <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-gray-500"
-        aria-hidden="true"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-gray-600"
       >
-        <div className="w-[1px] h-12 bg-gradient-to-b from-sabeer-primary to-transparent" />
-        <ChevronDown className="animate-bounce" size={20} />
+        <div className="w-[1px] h-16 bg-gradient-to-b from-sabeer-primary/50 to-transparent" />
+        <ChevronDown size={20} />
       </motion.div>
     </section>
   );

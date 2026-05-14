@@ -22,6 +22,28 @@
   html {
     scroll-behavior: smooth;
   }
+
+  ::selection {
+    background-color: var(--color-sabeer-primary);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
 }
 
 @layer utilities {
@@ -40,31 +62,34 @@
   }
 
   .glow-blue {
-    box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 122, 255, 0.15);
   }
 
   .text-glow {
-    text-shadow: 0 0 15px rgba(0, 122, 255, 0.5);
+    text-shadow: 0 0 20px rgba(0, 122, 255, 0.4);
   }
 
   .bg-grid-white {
-    background-size: 40px 40px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
 
-  .animate-reveal {
-    animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 
-  @keyframes reveal {
-    0% {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
   }
 }
