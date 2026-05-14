@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Github, Twitter, Linkedin, ExternalLink, Award, Globe, Code } from 'lucide-react';
+import founderImg from '../assets/IMG-20260423-WA0024.jpg';
 
 export default function Team() {
   return (
@@ -22,7 +23,7 @@ export default function Team() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10" />
               <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
                  <img
-                   src="/IMG-20260423-WA0024.jpg"
+                   src={founderImg}
                    alt="Mustapha Abdulsalam"
                    className="w-full h-full object-cover"
                    onError={(e) => {

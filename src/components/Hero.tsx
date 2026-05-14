@@ -3,7 +3,7 @@ import { ArrowRight, ChevronDown, Command, Cpu, Globe, Zap } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sabeer-bg pt-12">
+    <section id="home" className="relative min-h-screen flex items-start justify-center overflow-hidden bg-sabeer-bg pt-20 md:pt-24">
       {/* Background Cinematic Effects */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <div className="absolute inset-0 bg-grid-white opacity-[0.15]" />
@@ -88,7 +88,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8 text-white uppercase"
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-none mb-8 text-white uppercase"
         >
           Building <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sabeer-primary via-white to-sabeer-accent">AI-Powered</span> <br />
