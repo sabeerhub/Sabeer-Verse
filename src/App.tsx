@@ -12,7 +12,6 @@ import Technology from './components/Technology';
 import WhySabeerVerse from './components/WhySabeerVerse';
 import SelectedWork from './components/SelectedWork';
 import About from './components/About';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
@@ -31,7 +30,6 @@ export default function App() {
         <WhySabeerVerse />
         <SelectedWork />
         <About />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

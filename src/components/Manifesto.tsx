@@ -26,11 +26,10 @@ export default function Manifesto() {
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-0 relative z-10">
 
-        {/* Decorative Grid Line */}
-        <div className="flex items-center gap-2 mb-16">
-          <Terminal className="w-4 h-4 text-brand-blue animate-pulse" />
-          <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue">MANIFESTO // PHILOSOPHY</span>
-        </div>
+        {/* Simple Section Title */}
+        <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-brand-blue mb-16">
+          MANIFESTO
+        </h2>
 
         <div className="space-y-24">
           {manifestoItems.map((item, index) => (

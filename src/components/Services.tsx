@@ -80,20 +80,10 @@ export default function Services() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
 
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
-          <div className="lg:col-span-8">
-            <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue mb-4 block">
-              Systems // Capabilities
-            </span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
-              Core Expertise
-            </h2>
-          </div>
-          <div className="lg:col-span-4">
-            <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed max-w-sm">
-              We design and compile state-of-the-art interactive frameworks. Combining luxury design thinking with hardware-level logic.
-            </p>
-          </div>
+        <div className="mb-24">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
+            SERVICES
+          </h2>
         </div>
 
         {/* Services Grid layout */}

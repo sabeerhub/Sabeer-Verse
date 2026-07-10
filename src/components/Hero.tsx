@@ -76,23 +76,11 @@ export default function Hero() {
           animate="visible"
           className="flex flex-col items-center gap-8 md:gap-12"
         >
-          {/* Micro Tagline */}
-          <motion.div
-            variants={itemVariants}
-            className="flex items-center gap-2 px-4 py-2 bg-black text-white text-[10px] font-mono uppercase tracking-[0.3em]"
-          >
-            <Cpu className="w-3.5 h-3.5 text-brand-blue animate-pulse" />
-            <span>Creative Intelligence Studio</span>
-          </motion.div>
-
           {/* Large Kinetic Headline */}
           <motion.div variants={itemVariants} className="space-y-4 max-w-5xl">
             <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter kerning-ultra uppercase leading-[0.85] text-black">
               Sabeer-Verse
             </h1>
-            <p className="text-sm md:text-lg lg:text-xl font-bold tracking-tight text-gray-500 uppercase tracking-[0.15em] max-w-2xl mx-auto mt-6">
-              Engineering future digital products & immersive intelligence systems with absolute precision.
-            </p>
           </motion.div>
 
           {/* Action Row */}
@@ -120,7 +108,6 @@ export default function Hero() {
         transition={{ delay: 2, duration: 1.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
-        <span className="text-[9px] uppercase tracking-[0.3em] text-brand-blue font-mono font-bold animate-pulse">SCROLL PROTOCOL</span>
         <div className="w-[1px] h-16 bg-gradient-to-b from-brand-blue via-brand-blue/30 to-transparent relative overflow-hidden">
           <motion.div
             animate={{

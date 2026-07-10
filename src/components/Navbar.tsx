@@ -9,7 +9,6 @@ const navLinks = [
   { name: 'Tech', href: '#tech' },
   { name: 'Why Us', href: '#why' },
   { name: 'About', href: '#about' },
-  { name: 'Reviews', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -66,7 +65,7 @@ export default function Navbar() {
               href="#contact"
               className="text-[10px] font-mono uppercase tracking-widest font-bold border border-black/10 hover:border-brand-blue px-6 py-3 hover:bg-black hover:text-white transition-all duration-500 flex items-center gap-2"
             >
-              System Online <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
+              Contact
             </a>
           </div>
 
@@ -91,9 +90,6 @@ export default function Navbar() {
               className="fixed inset-0 top-[60px] md:top-[80px] w-full bg-white/98 backdrop-blur-lg z-40 border-t border-gray-100 flex flex-col justify-between p-8 overflow-y-auto lg:hidden"
             >
               <div className="flex flex-col gap-6 py-6">
-                <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-2 flex items-center gap-2">
-                  <Terminal className="w-3.5 h-3.5 text-brand-blue" /> System Sitemap
-                </span>
                 {navLinks.map((link) => (
                   <motion.a
                     initial={{ opacity: 0, x: -20 }}
@@ -112,14 +108,8 @@ export default function Navbar() {
 
               {/* Drawer Footer */}
               <div className="border-t border-gray-100 pt-8 pb-12 flex flex-col gap-4">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                  <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
-                    SYSTEM INFRASTRUCTURE ACTIVE
-                  </span>
-                </div>
                 <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
-                  © 2026 Sabeer-Verse. HANDCRAFTED DESIGN & CODE.
+                  © 2026 Sabeer-Verse.
                 </div>
               </div>
             </motion.div>

@@ -112,22 +112,10 @@ export default function Products() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
 
         {/* Section Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
-          <div className="lg:col-span-8">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 bg-brand-blue animate-pulse" />
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue">Sabeer-Verse // Ecosystem</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter kerning-ultra uppercase leading-[0.95]">
-              Core <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-blue to-white">Products</span>
-            </h2>
-          </div>
-          <div className="lg:col-span-4 flex flex-col justify-end">
-            <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed max-w-sm">
-              We design and compile state-of-the-art software systems. These modular solutions power modern platforms with absolute precision.
-            </p>
-          </div>
+        <div className="mb-24">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
+            PRODUCTS
+          </h2>
         </div>
 
         {/* Product Navigation Grid */}
@@ -274,14 +262,8 @@ export default function Products() {
 
         {/* Upcoming Products Subsection */}
         <div className="border-t border-white/10 pt-20">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-            <div>
-              <span className="text-xs font-mono uppercase text-brand-blue tracking-widest block mb-2">// Pipeline Products</span>
-              <h3 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">On The Horizon</h3>
-            </div>
-            <p className="text-gray-400 text-xs md:text-sm max-w-sm">
-              Sabeer-Verse is committed to launching intelligent solutions. These systems are in active development.
-            </p>
+          <div className="mb-12">
+            <h3 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">ON THE HORIZON</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -61,19 +61,10 @@ export default function SelectedWork() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
 
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-24 gap-8">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 bg-brand-blue" />
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue">Selected Case Studies // Portfolio</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
-              Selected Work
-            </h2>
-          </div>
-          <p className="text-gray-500 max-w-sm text-sm md:text-base font-medium leading-relaxed">
-            A curated index of elite digital craftsmanship, highlighting real technical performance and elegant system design.
-          </p>
+        <div className="mb-24">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
+            WORK
+          </h2>
         </div>
 
         {/* Projects Column Layout */}

@@ -78,19 +78,10 @@ export default function Technology() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 bg-brand-blue" />
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue">Protocol Stack // Architecture</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
-              Core Tech Stack
-            </h2>
-          </div>
-          <p className="text-gray-500 max-w-sm text-sm md:text-base font-medium leading-relaxed">
-            Our multi-tier tech stack compiles high-level requirements into high-performance binaries. Engineered for reliability, speed, and clean craftsmanship.
-          </p>
+        <div className="mb-24">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter kerning-ultra uppercase">
+            TECH
+          </h2>
         </div>
 
         {/* Tech Stack Interaction Grid */}
@@ -190,10 +181,9 @@ export default function Technology() {
 
         {/* Timeline Protocol Section */}
         <div className="border-t border-gray-100 pt-32">
-          <div className="text-center mb-20">
-            <span className="text-[10px] font-mono uppercase text-brand-blue tracking-[0.2em]">Engineering Chronicles</span>
+          <div className="mb-20">
             <h3 className="text-3xl md:text-5xl font-bold tracking-tighter kerning-ultra uppercase mt-2">
-              System Timeline
+              TIMELINE
             </h3>
           </div>
 
