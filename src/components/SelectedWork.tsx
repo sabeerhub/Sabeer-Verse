@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Code, ShieldCheck, Database, Cpu } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -9,35 +9,49 @@ interface Project {
   metrics: string;
   metricsLabel: string;
   image: string;
+  url: string;
 }
 
 const projects: Project[] = [
   {
-    title: "NeuroSystem",
-    category: "AI Product Design",
-    outcome: "Unified 12 modular intelligence pipelines into a single, cohesive neural operating console.",
-    stack: ["React 19", "PyTorch", "WebGL", "WASM"],
-    metrics: "-82%",
-    metricsLabel: "Inference Lag",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200"
+    title: "Zero Bank",
+    category: "Fintech Solution",
+    outcome: "AI-powered digital wallet for secure money transfers, transaction history, and modern banking experience.",
+    stack: ["React", "Firebase", "Tailwind CSS"],
+    metrics: "LIVE",
+    metricsLabel: "Production Status",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
+    url: "https://zero-bank-phi.vercel.app/"
   },
   {
-    title: "Vortex Interface",
-    category: "Web Engineering",
-    outcome: "Achieved constant 120fps physics-based fluid state rendering for high-density streaming dashboards.",
-    stack: ["Next.js", "WebGPU", "Tailwind CSS", "Go"],
-    metrics: "120 FPS",
-    metricsLabel: "Guaranteed Performance",
-    image: "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=1200"
+    title: "FUD Health Management System",
+    category: "Healthcare System",
+    outcome: "A complete healthcare platform connecting administrators, doctors, pharmacists, and patients in one intelligent system.",
+    stack: ["React", "Firebase", "Tailwind CSS"],
+    metrics: "LIVE",
+    metricsLabel: "Production Status",
+    image: "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=1200",
+    url: "https://fud-heath.vercel.app/"
   },
   {
-    title: "Core Protocol",
-    category: "System Architecture",
-    outcome: "Designed and compiled the atomic token scaling architecture and security schemas for high-speed transactions.",
-    stack: ["TypeScript", "Rust", "Docker", "eBPF"],
-    metrics: "100%",
-    metricsLabel: "SLA Audited Uptime",
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200"
+    title: "TimeLux",
+    category: "Premium E-Commerce",
+    outcome: "Premium e-commerce platform for luxury watches with payment integration and a powerful admin dashboard.",
+    stack: ["Next.js", "Supabase", "Korapay", "Tailwind CSS"],
+    metrics: "LIVE",
+    metricsLabel: "Production Status",
+    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200",
+    url: "https://timeluxy.vercel.app/"
+  },
+  {
+    title: "Personal Portfolio",
+    category: "System Identity",
+    outcome: "Official portfolio showcasing my experience, projects, design philosophy, and technical expertise.",
+    stack: ["React", "Tailwind CSS", "Framer Motion"],
+    metrics: "LIVE",
+    metricsLabel: "Production Status",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1200",
+    url: "https://sabeer-ai.vercel.app/"
   }
 ];
 
@@ -134,9 +148,14 @@ export default function SelectedWork() {
 
                 {/* Action Link */}
                 <div className="pt-4">
-                  <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest font-bold text-black hover:text-brand-blue group-hover:text-brand-blue transition-colors cursor-pointer">
-                    Inspect Architecture <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </span>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest font-bold text-black hover:text-brand-blue group-hover:text-brand-blue transition-colors cursor-pointer"
+                  >
+                    Visit Project <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
                 </div>
 
               </div>

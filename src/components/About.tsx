@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { Shield, Sparkles, Brain, Code } from 'lucide-react';
 import founderImage from '@/assets/MG-20260423-WA0024.jpg';
 
 export default function About() {
@@ -17,19 +16,23 @@ export default function About() {
                 The Studio // Identity
               </span>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter kerning-ultra uppercase leading-[0.9]">
-                Sabeer-Verse <br /> builds systems <br /> that think.
+                Building the Future with AI.
               </h2>
             </div>
 
             <div className="space-y-6 text-gray-700 font-medium text-sm md:text-base leading-relaxed max-w-2xl">
               <p className="text-lg md:text-xl text-black">
-                We are a creative intelligence studio and AI systems lab building immersive digital ecosystems, high-performance web experiences, and elite software architecture.
+                Sabeer-Verse is an AI-powered technology company founded by Mustapha Abdulsalam (Sabeer).
               </p>
               <p>
-                Sabeer-Verse was founded to close the widening chasm between deep computational power and user-focused elegance. We believe that intelligence should not be buried behind dense terminals, but should manifest through responsive, physical, and timeless layouts.
+                We design and build intelligent digital products that combine exceptional user experience with modern engineering.
               </p>
               <p>
-                We do not operate like conventional design agencies or outsourced consultancies. We work as a collaborative research laboratory, engineering custom solutions for high-stakes tech startups and established global leaders.
+                Our focus spans AI applications, SaaS platforms, fintech, healthcare, education technology, and business software. Every product is crafted to solve real-world problems with simplicity, speed, and reliability.
+              </p>
+              <p className="border-t border-gray-100 pt-6">
+                <span className="text-[10px] font-mono text-brand-blue uppercase tracking-widest block mb-2">Our Mission</span>
+                Build technology that empowers businesses, creators, students, and communities through AI and world-class digital experiences.
               </p>
             </div>
 
@@ -37,7 +40,7 @@ export default function About() {
             <div className="pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-8 items-start sm:items-center justify-between">
               <div>
                 <div className="font-bold text-gray-900 text-base md:text-lg">
-                  Mustapha Abdulsalam
+                  Mustapha Abdulsalam (Sabeer)
                 </div>
                 <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-0.5">
                   Founder & Principal Director // Sabeer-Verse
@@ -45,7 +48,7 @@ export default function About() {
               </div>
 
               {/* Handcrafted Signature Emulation */}
-              <div className="text-2xl font-serif italic text-brand-blue tracking-widest pointer-events-none select-none select-none font-black">
+              <div className="text-2xl font-serif italic text-brand-blue tracking-widest pointer-events-none select-none font-black">
                 M. Abdulsalam
               </div>
             </div>

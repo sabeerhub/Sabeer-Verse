@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Cpu, Activity, Shield, Terminal, ArrowRight, CornerRightDown } from 'lucide-react';
+import { Cpu, Activity, Shield, Terminal, ArrowRight, CornerRightDown, Laptop, Star } from 'lucide-react';
 
 interface Product {
   id: string;
@@ -16,65 +16,88 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 'sabeer-os',
-    name: 'Sabeer-OS',
-    category: 'System Core',
-    tagline: 'The ultimate spatial intelligence framework.',
-    description: 'A distributed cognitive operating system built to orchestrate real-time agent workflows across hybrid cloud environments and edge clusters.',
+    id: 'zero-bank',
+    name: 'Zero Bank',
+    category: 'Fintech Portal',
+    tagline: 'AI-powered digital wallet for secure transfers.',
+    description: 'A modern banking dashboard supporting transaction logging, secure peer-to-peer transfers, and instant performance metrics tracking.',
     icon: Cpu,
     metrics: [
-      { label: 'Latency', value: '1.2ms', detail: 'Edge-to-core pipeline' },
-      { label: 'Concurrency', value: '10M+', detail: 'Simultaneous agent nodes' },
-      { label: 'Efficiency', value: '-42%', detail: 'Power consumption reduction' }
+      { label: 'Latency', value: '1.8ms', detail: 'Realtime balance update' },
+      { label: 'Uptime', value: '99.99%', detail: 'Secured on Firebase clusters' },
+      { label: 'Status', value: 'LIVE', detail: 'Fully operational' }
     ],
     features: [
-      'Autonomous dynamic compute reallocation',
-      'Immutable state replication with zero overhead',
-      'Real-time neural context streaming',
-      'Zero-trust hardware isolation protocol'
+      'Asynchronous payment handshake protocols',
+      'Encrypted ledger logging',
+      'Highly responsive balance charts'
     ],
-    techSpec: 'Kernel built on Rust / WASM core compiler architecture'
+    techSpec: 'Built on React, Firebase, and Tailwind CSS'
   },
   {
-    id: 'pulse-engine',
-    name: 'Pulse Engine',
-    category: 'Motion & Fluidity',
-    tagline: 'Fluid kinetic orchestration for complex systems.',
-    description: 'A high-performance animation and physical state engine providing GPU-accelerated motion calculations with natural micro-damping feedback.',
+    id: 'fud-health',
+    name: 'FUD Health Management System',
+    category: 'Healthcare Hub',
+    tagline: 'Connect administrators, doctors, and patients.',
+    description: 'A complete medical management network linking clinicians, pharmaceutical inventories, patients, and ward administrators in one portal.',
     icon: Activity,
     metrics: [
-      { label: 'Frame Rate', value: '120fps', detail: 'Guaranteed render loop' },
-      { label: 'Calculations', value: '8.4B', detail: 'Matrix operations/sec' },
-      { label: 'Damping', value: '0.001', detail: 'Precision error margin' }
+      { label: 'Workflow Speed', value: 'Instant', detail: 'Realtime syncing operations' },
+      { label: 'Sync Delay', value: '0.0s', detail: 'Firestore atomic listeners' },
+      { label: 'Status', value: 'LIVE', detail: 'Fully operational' }
     ],
     features: [
-      'Intelligent viewport predictive loading',
-      'Spring physics interpolation with custom tension layers',
-      'Sub-pixel rendering anti-aliasing engine',
-      'Declarative state visual synchronization'
+      'Multi-role secure routing levels',
+      'Dynamic inventory dispatch records',
+      'Unified diagnostics scheduler'
     ],
-    techSpec: 'Native WebGL2 / WebGPU state pipeline with parallel thread execution'
+    techSpec: 'Built on React, Firebase, and Tailwind CSS'
   },
   {
-    id: 'cognitive-api',
-    name: 'Cognitive API',
-    category: 'Intelligence Core',
-    tagline: 'High-speed programmatic intelligence gateways.',
-    description: 'A secure, low-overhead REST/GraphQL API bridging legacy systems with advanced LLMs, vision, and auditory intelligence nodes.',
+    id: 'timelux',
+    name: 'TimeLux',
+    category: 'E-Commerce Protocol',
+    tagline: 'Premium watch marketplace with Korapay payment gateways.',
+    description: 'An elite e-commerce layout built for custom-branded watch houses. Coupled with powerful administrators backends and secure checkouts.',
     icon: Shield,
     metrics: [
-      { label: 'Inference', value: '<18ms', detail: 'Context-aware token delivery' },
-      { label: 'Security', value: 'E2EE', detail: 'Quantum-resistant tunnels' },
-      { label: 'Reliability', value: '99.999%', detail: 'SLA backed global failover' }
+      { label: 'Checkouts', value: 'Secured', detail: 'Quantum-safe checkout handshakes' },
+      { label: 'Payments', value: 'Korapay', detail: 'Integrated instant checkouts' },
+      { label: 'Status', value: 'LIVE', detail: 'Fully operational' }
     ],
     features: [
-      'Self-healing route selection algorithms',
-      'Dynamic token allocation and custom tier-throttling',
-      'Embedded semantic vector vectorization layer',
-      'Automated schema generation and compliance auditing'
+      'Rich custom animations and transition buffers',
+      'Dynamic inventory controls and dashboards',
+      'Instant responsive layouts'
     ],
-    techSpec: 'HTTP/3 native communication using specialized Go backend clusters'
+    techSpec: 'Built on Next.js, Supabase, Korapay, and Tailwind CSS'
+  },
+  {
+    id: 'sabeer-portfolio',
+    name: 'Sabeer Portfolio',
+    category: 'System Identity',
+    tagline: 'Official Sabeer-Verse experience portal.',
+    description: 'An authentic high-fidelity directory displaying my professional experience, credentials, philosophy, and software systems.',
+    icon: Laptop,
+    metrics: [
+      { label: 'Aesthetic', value: 'Premium', detail: 'Minimal swiss design rules' },
+      { label: 'Fluidity', value: '120 FPS', detail: 'Framer Motion spring calculations' },
+      { label: 'Status', value: 'LIVE', detail: 'Fully operational' }
+    ],
+    features: [
+      'Dynamic project coordinate showcase',
+      'Responsive touch grids and transitions',
+      'Premium dark/light layout integration'
+    ],
+    techSpec: 'Built on React, Tailwind CSS, and Framer Motion'
   }
+];
+
+const upcomingProducts = [
+  { name: 'Spark Chat', tag: 'Realtime AI Messaging' },
+  { name: 'Schlverse', tag: 'Academic Intelligence Hub' },
+  { name: 'SubmitIV', tag: 'Enterprise Intake Flow' },
+  { name: 'Aura Pay', tag: 'Global Transaction Core' }
 ];
 
 export default function Products() {
@@ -93,7 +116,7 @@ export default function Products() {
           <div className="lg:col-span-8">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-2 h-2 bg-brand-blue animate-pulse" />
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue">Sabeer // Systems</span>
+              <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue">Sabeer-Verse // Ecosystem</span>
             </div>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter kerning-ultra uppercase leading-[0.95]">
               Core <br />
@@ -102,18 +125,18 @@ export default function Products() {
           </div>
           <div className="lg:col-span-4 flex flex-col justify-end">
             <p className="text-gray-400 font-medium text-sm md:text-base leading-relaxed max-w-sm">
-              We design and compile state-of-the-art AI infrastructures. These modular systems power modern enterprises with extreme mechanical precision.
+              We design and compile state-of-the-art software systems. These modular solutions power modern platforms with absolute precision.
             </p>
           </div>
         </div>
 
         {/* Product Navigation Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
 
           {/* Tabs - Column 1 */}
           <div className="lg:col-span-4 space-y-4">
             <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
-              <CornerRightDown className="w-3 h-3 text-brand-blue" /> Select System Core
+              <CornerRightDown className="w-3 h-3 text-brand-blue" /> Choose Live Product
             </div>
             {products.map((product) => {
               const Icon = product.icon;
@@ -170,14 +193,14 @@ export default function Products() {
               >
                 {/* Tech Grid Matrix Watermark */}
                 <div className="absolute top-4 right-4 text-[9px] font-mono text-white/20 tracking-wider">
-                  SPEC_ID: {activeProduct.id.toUpperCase()} // S_VER_19.4
+                  SPEC_ID: {activeProduct.id.toUpperCase()} // S_VER_26.1
                 </div>
 
                 <div className="mb-10">
                   <span className="text-xs font-mono uppercase text-brand-blue tracking-[0.2em] block mb-3">
                     {activeProduct.category}
                   </span>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter kerning-ultra uppercase mb-4">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter kerning-ultra uppercase mb-4 text-white">
                     {activeProduct.name}
                   </h3>
                   <p className="text-lg text-brand-blue font-medium tracking-tight mb-4">
@@ -248,6 +271,40 @@ export default function Products() {
           </div>
 
         </div>
+
+        {/* Upcoming Products Subsection */}
+        <div className="border-t border-white/10 pt-20">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div>
+              <span className="text-xs font-mono uppercase text-brand-blue tracking-widest block mb-2">// Pipeline Products</span>
+              <h3 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">On The Horizon</h3>
+            </div>
+            <p className="text-gray-400 text-xs md:text-sm max-w-sm">
+              Sabeer-Verse is committed to launching intelligent solutions. These systems are in active development.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {upcomingProducts.map((p, index) => (
+              <div
+                key={index}
+                className="p-6 border border-white/5 bg-white/[0.01] flex flex-col justify-between aspect-[3/2]"
+              >
+                <div className="flex justify-between items-start">
+                  <Star className="w-5 h-5 text-brand-blue/40" />
+                  <span className="text-[9px] font-mono uppercase bg-white/10 text-white px-2 py-0.5 rounded-sm tracking-widest font-bold">
+                    Coming Soon
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">{p.name}</h4>
+                  <p className="text-xs text-gray-500 font-mono">{p.tag}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

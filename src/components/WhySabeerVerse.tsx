@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Target, Pocket, Eye, Cpu, Compass, HardDrive } from 'lucide-react';
+import { Target, Compass, Cpu, HardDrive } from 'lucide-react';
 
 interface Feature {
   icon: any;
@@ -13,35 +13,35 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: Target,
-    title: 'Extreme Technical Precision',
-    subtitle: 'Zero compromises on code quality.',
-    description: 'Every interaction, pixel, and transition is built to work flawlessly across devices. We compile lightweight pipelines that run at constant high refresh rates.',
+    title: 'Build for Scale',
+    subtitle: 'High scalability thresholds.',
+    description: 'Modern architectures built for growth. Ready to scale and support heavy workload surges flawlessly.',
     metric: '99.9%',
     metricLabel: 'Runtime Fidelity'
   },
   {
     icon: Compass,
-    title: 'Intelligent Design Systems',
-    subtitle: 'Systemic consistency across media.',
-    description: 'We don’t draw static pages; we compile responsive, scalable layout protocols. Built with modular codebases to grow with your technological evolution.',
+    title: 'Premium Design',
+    subtitle: 'Systemic layout principles.',
+    description: 'Beautiful interfaces focused on user experience. Engineered with elite swiss-grid metrics.',
     metric: '100%',
     metricLabel: 'Systemic Cohesion'
   },
   {
     icon: Cpu,
-    title: 'Integrated AI Architecture',
-    subtitle: 'Deeply embedded intelligence models.',
-    description: 'We natively implement advanced context models, vector stores, and programmatic LLM triggers straight into your user-facing layouts with zero third-party lag.',
+    title: 'AI First',
+    subtitle: 'Deep intelligence engines.',
+    description: 'Every product leverages modern AI capabilities to streamline user flows and deliver immediate outputs.',
     metric: '<20ms',
     metricLabel: 'Cognitive Response'
   },
   {
     icon: HardDrive,
-    title: 'Timeless Aesthetic Craft',
-    subtitle: 'Luxury editorial aesthetics.',
-    description: 'Combining clean swiss grid principles with modern tech-noir minimalism. We design websites and products that continue to look cutting-edge for decades.',
-    metric: '0.0',
-    metricLabel: 'Unnecessary Noise'
+    title: 'Performance',
+    subtitle: 'Highly compiled speed layers.',
+    description: 'Fast, secure, and production-ready applications structured on leading software engineering standards.',
+    metric: '120FPS',
+    metricLabel: 'Fluid Motion Loop'
   }
 ];
 

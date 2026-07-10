@@ -1,12 +1,12 @@
 import { useState, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Calendar, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, Github, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
 export default function Contact() {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
-    service: 'AI Product Design',
+    service: 'AI Product Development',
     budget: '$30K - $70K',
     message: ''
   });
@@ -29,7 +29,7 @@ export default function Contact() {
       setFormState({
         name: '',
         email: '',
-        service: 'AI Product Design',
+        service: 'AI Product Development',
         budget: '$30K - $70K',
         message: ''
       });
@@ -37,11 +37,16 @@ export default function Contact() {
   };
 
   const services = [
-    'AI Product Design',
-    'Web Experience Engineering',
-    'Creative Systems Architecture',
-    'Brand Identity for Tech',
-    'High-performance Frontend'
+    'AI Product Development',
+    'SaaS Development',
+    'Web Application Development',
+    'UI/UX Design',
+    'Frontend Engineering',
+    'Firebase Development',
+    'Fintech Solutions',
+    'Healthcare Systems',
+    'Education Technology',
+    'Product Strategy'
   ];
 
   const budgets = [
@@ -63,38 +68,42 @@ export default function Contact() {
               <span className="text-xs font-mono uppercase tracking-[0.3em] text-white/70 mb-4 block">
                 Let's Build // Communication
               </span>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter kerning-ultra uppercase leading-[0.85] text-white">
-                Start a <br /> project
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter kerning-ultra uppercase leading-[0.85] text-white">
+                Let's Build <br /> Something <br /> Exceptional.
               </h2>
             </div>
 
             <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-sm font-medium">
-              Ready to construct a high-performance system? Complete the form to establish a secure intelligence handshake with Sabeer-Verse.
+              Whether you have an idea, startup, or business challenge, let's create a world-class digital product together.
             </p>
 
-            <div className="space-y-6 pt-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/10 rounded-sm text-white">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-[10px] font-mono text-white/50 uppercase tracking-widest">EMAIL DEPT</div>
-                  <a href="mailto:hello@sabeer-verse.com" className="text-base md:text-lg font-bold hover:underline">
-                    hello@sabeer-verse.com
-                  </a>
-                </div>
-              </div>
+            <div className="space-y-4 pt-6">
+              <a
+                href="mailto:hello@sabeer-verse.com"
+                className="w-full sm:w-auto text-center border border-white/30 hover:border-white text-white font-mono uppercase tracking-widest text-xs font-bold py-4 px-8 inline-flex items-center justify-center gap-2 group transition-all"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Email Me</span>
+              </a>
 
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/10 rounded-sm text-white">
-                  <Calendar className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-[10px] font-mono text-white/50 uppercase tracking-widest">SCHEDULE</div>
-                  <button className="text-base md:text-lg font-bold hover:underline text-left">
-                    Book Architectural Call
-                  </button>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://github.com/sabeerhub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center border border-white/20 hover:border-white text-white font-mono uppercase tracking-widest text-xs font-bold py-3.5 px-6 inline-flex items-center justify-center gap-2 group transition-all"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>View GitHub</span>
+                </a>
+                <a
+                  href="https://sabeer-ai.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center border border-white/20 hover:border-white text-white font-mono uppercase tracking-widest text-xs font-bold py-3.5 px-6 inline-flex items-center justify-center gap-2 group transition-all"
+                >
+                  <span>Start a Project</span>
+                </a>
               </div>
             </div>
           </div>
@@ -120,7 +129,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-3xl font-bold tracking-tight uppercase kerning-ultra">Handshake Initiated</h3>
                   <p className="text-gray-500 max-w-md mx-auto text-sm leading-relaxed">
-                    Sabeer-Verse systems received your corporate dossier. Our coordination engine is scheduling your architecture review session. Expected dispatch <span className="font-mono text-brand-blue font-bold">&lt; 2 hrs</span>.
+                    Sabeer-Verse received your corporate dossier. Our coordination engine is scheduling your architecture review session. Expected dispatch <span className="font-mono text-brand-blue font-bold">&lt; 2 hrs</span>.
                   </p>
                   <button
                     onClick={() => setStatus('idle')}
@@ -170,7 +179,7 @@ export default function Contact() {
                     <label className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
                       Target System / Capabilities
                     </label>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[160px] overflow-y-auto border border-gray-100 p-2">
                       {services.map((srv) => (
                         <button
                           key={srv}

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Cpu, Server, Network, Code, Layers, Zap } from 'lucide-react';
 
 interface TechLayer {
   level: string;
@@ -13,31 +12,38 @@ interface TechLayer {
 const techLayers: TechLayer[] = [
   {
     level: 'L1',
-    title: 'Physical Orchestration Grid',
-    description: 'Dynamic load management and computing orchestration layer optimized for ultra-low latency inference pipelines.',
-    status: 'Operational // 99.999% SLA',
-    tech: ['WASM', 'Rust', 'Kubernetes edge clusters']
+    title: 'Frontend Engineering Layer',
+    description: 'Developing high-fidelity, kinetic user experiences with flawless performance and native fluid response speeds.',
+    status: 'Operational // 120 FPS',
+    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript']
   },
   {
     level: 'L2',
-    title: 'Cognitive Streaming Gateway',
-    description: 'Bridges contextual user queries to parallel deep learning clusters with real-time feedback loops.',
-    status: 'Optimized // 12.4ms avg',
-    tech: ['gRPC', 'WebSockets', 'Go compiler systems']
+    title: 'Backend Systems Layer',
+    description: 'Securing structural state stores, realtime synchronization channels, cloud handlers, and identity portals.',
+    status: 'Active // Quantum Secured',
+    tech: ['Firebase', 'Firestore', 'Firebase Authentication', 'Supabase', 'Node.js']
   },
   {
     level: 'L3',
-    title: 'Pulse Fluid Kinetic Engine',
-    description: 'GPU-accelerated vector rendering framework rendering interactive, dense visualization nodes at native refresh rates.',
-    status: 'Fluid // 120 FPS guaranteed',
-    tech: ['WebGPU', 'WebGL2', 'HLSL', 'TypeScript']
+    title: 'Creative Design & Interaction',
+    description: 'Handcrafting blueprint layouts based on clean typographic grids and modern physics micro-damping physics.',
+    status: 'Swiss-grid Optimized',
+    tech: ['Figma', 'Framer Motion', 'GSAP', 'shadcn/ui']
   },
   {
     level: 'L4',
-    title: 'Zero-Trust Security Shield',
-    description: 'Automated post-quantum encrypted sandbox environment isolating system agents from exterior interference.',
-    status: 'Active // TLS 1.3 / E2EE',
-    tech: ['OAuth3', 'eBPF', 'Rust kernel modules']
+    title: 'Artificial Intelligence Stack',
+    description: 'Native execution of contextual multi-modal structures and advanced vector retrieval straight into the system flow.',
+    status: 'Cognitive Connected',
+    tech: ['OpenAI', 'Claude', 'Gemini']
+  },
+  {
+    level: 'L5',
+    title: 'Deployment & Continuous Integration',
+    description: 'Automating build pipelines, continuous checks, and global edge CDNs for instant-loading delivery.',
+    status: 'Active // CD Global',
+    tech: ['Vercel', 'GitHub']
   }
 ];
 

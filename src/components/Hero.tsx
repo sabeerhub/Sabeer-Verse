@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowDown, Terminal, Cpu } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 
 export default function Hero() {
   const containerVariants = {
