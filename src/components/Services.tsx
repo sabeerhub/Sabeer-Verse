@@ -1,41 +1,76 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Cpu, Code, Layers, Sparkles, Orbit } from 'lucide-react';
+import { ArrowUpRight, Cpu, Code, Layers, Sparkles, Orbit, ShieldCheck, Database, Smartphone, GraduationCap, TrendingUp } from 'lucide-react';
 
 const services = [
   {
     code: '01 // AI_PD',
-    title: "AI Product Design",
-    description: "Architecting intelligent interfaces that bridge the gap between human intent and machine execution. We model cognitive workflows and context-aware templates.",
-    features: ['Cognitive workflow design', 'Agent feedback loop visualization', 'Contextual multi-modal layouts'],
+    title: "AI Product Development",
+    description: "Designing and developing autonomous agent architectures and intelligent workflow templates integrated directly into custom systems.",
+    features: ['Cognitive multi-modal designs', 'Embedded prompt loops', 'Adaptive intelligence models'],
     icon: Sparkles
   },
   {
-    code: '02 // EXP_ENG',
-    title: "Web Experience Engineering",
-    description: "Developing high-performance, cinematic digital environments with unmatched technical precision. Fluid physics-based coordinate animations.",
-    features: ['120fps GPU acceleration', 'Sub-pixel rendering engines', 'Responsive fluid breakpoints'],
-    icon: Code
-  },
-  {
-    code: '03 // SYS_ARC',
-    title: "Creative Systems Architecture",
-    description: "Building scalable design languages and systemic frameworks for future-facing brands. We translate static brand rules into functional design systems.",
-    features: ['Atomic design systems in code', 'Distributed token configurations', 'Storybook & test suite integrations'],
+    code: '02 // SAAS_DEV',
+    title: "SaaS Development",
+    description: "Building scalable, multitenant cloud software with modern subscription routing, administrative control modules, and robust structures.",
+    features: ['Automated usage meters', 'High-speed secure portals', 'Clean API integrations'],
     icon: Layers
   },
   {
-    code: '04 // BR_ID',
-    title: "Brand Identity for Tech Companies",
-    description: "Crafting digital-first identities that communicate elite engineering and visionary intent. Tailored for companies working on complex, future infrastructures.",
-    features: ['High-fidelity vector geometries', 'Editorial typography systems', 'Interactive micro-brand motion'],
+    code: '03 // WEB_DEV',
+    title: "Web Application Development",
+    description: "Developing complex, high-performance web systems using cutting-edge tools to achieve extreme operational efficiency.",
+    features: ['Clean software design', 'Responsive grid structures', 'Custom backend logic'],
+    icon: Code
+  },
+  {
+    code: '04 // UI_UX',
+    title: "UI/UX Design",
+    description: "Handcrafting luxury visual aesthetics and interactive flows based on swiss grids, beautiful layouts, and physical physics.",
+    features: ['High-fidelity interactive blueprints', 'Dynamic layout prototypes', 'Premium micro-brand motion'],
     icon: Orbit
   },
   {
-    code: '05 // FT_SYS',
-    title: "High-performance Frontend Systems",
-    description: "Optimizing every frame and interaction for fluid, GPU-accelerated digital storytelling. Deferring bundle payloads to achieve true instant-loading performance.",
-    features: ['Vite & Next.js chunk optimization', 'Advanced state orchestration', 'WASM-powered render pipelines'],
+    code: '05 // FE_ENG',
+    title: "Frontend Engineering",
+    description: "Optimizing code compilation, layouts, and frame-rates to deliver instant-loading performance across standard breakpoints.",
+    features: ['Constant 120fps motion loops', 'Optimized bundle structures', 'Clean semantic architectures'],
     icon: Cpu
+  },
+  {
+    code: '06 // FB_DEV',
+    title: "Firebase Development",
+    description: "Configuring serverless databases, realtime synchronization webs, cloud functions, and authentication shields.",
+    features: ['Realtime synchronized engines', 'Secure security configurations', 'Scalable serverless endpoints'],
+    icon: Database
+  },
+  {
+    code: '07 // FIN_SOL',
+    title: "Fintech Solutions",
+    description: "Engineering secure transaction nodes, responsive money routing dashboards, and modern online wallet systems.",
+    features: ['End-to-end encrypted tunnels', 'Realtime execution meters', 'Payment gateway configuration'],
+    icon: ShieldCheck
+  },
+  {
+    code: '08 // HLTH_SYS',
+    title: "Healthcare Systems",
+    description: "Structuring intelligent operational platform software linking administrators, doctors, and patients cleanly.",
+    features: ['Inter-agency workflow routing', 'Secure record modules', 'Highly semantic layouts'],
+    icon: Smartphone
+  },
+  {
+    code: '09 // ED_TECH',
+    title: "Education Technology",
+    description: "Designing intuitive knowledge modules, online class coordination platforms, and intelligent learning systems.",
+    features: ['Interactive dynamic cards', 'Student performance tracking', 'Resource management modules'],
+    icon: GraduationCap
+  },
+  {
+    code: '10 // PD_STRAT',
+    title: "Product Strategy",
+    description: "Providing high-fidelity consulting to guide early-stage concepts and businesses into world-class digital systems.",
+    features: ['Comprehensive workflow maps', 'Technical execution timelines', 'Optimized market strategies'],
+    icon: TrendingUp
   }
 ];
 
@@ -70,7 +105,7 @@ export default function Services() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 className="group relative bg-white border border-gray-100 hover:border-brand-blue/35 p-10 md:p-12 flex flex-col justify-between aspect-square md:aspect-auto md:min-h-[460px] hover:shadow-lg hover:shadow-brand-blue/[0.03] transition-all duration-700"
               >

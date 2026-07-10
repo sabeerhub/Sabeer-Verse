@@ -17,17 +17,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const linksGroup1 = [
-    { name: 'Core Work', href: '#work' },
-    { name: 'System Services', href: '#services' },
-    { name: 'Products Core', href: '#products' },
-    { name: 'Tech Protocol', href: '#tech' }
+    { name: 'WORK', href: '#work' },
+    { name: 'SERVICES', href: '#services' },
+    { name: 'PRODUCTS', href: '#products' },
+    { name: 'TECH', href: '#tech' }
   ];
 
   const linksGroup2 = [
-    { name: 'Why Us', href: '#why' },
-    { name: 'About Studio', href: '#about' },
-    { name: 'Client Reviews', href: '#testimonials' },
-    { name: 'Inquire Handshake', href: '#contact' }
+    { name: 'WHY US', href: '#why' },
+    { name: 'ABOUT', href: '#about' },
+    { name: 'REVIEWS', href: '#testimonials' },
+    { name: 'CONTACT', href: '#contact' }
   ];
 
   return (
@@ -44,13 +44,13 @@ export default function Footer() {
               <span className="text-white font-mono font-black">Sabeer-Verse</span>
             </a>
             <p className="text-gray-400 text-xs md:text-sm leading-relaxed max-w-sm font-medium">
-              A premium creative intelligence studio and AI systems lab. We compile physical experiences for future-facing digital architectures.
+              Building AI-powered digital products that solve real-world problems. Founded by Mustapha Abdulsalam (Sabeer).
             </p>
 
             <div className="flex items-center gap-2 pt-2">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
               <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
-                SYSTEM INFRASTRUCTURE ONLINE // VERSION 19.4
+                SYSTEM INFRASTRUCTURE ONLINE // VERSION 26.1
               </span>
             </div>
           </div>
@@ -139,20 +139,35 @@ export default function Footer() {
         <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] font-mono text-gray-500">
 
           <div>
-            © {currentYear} Sabeer-Verse. HANDCRAFTED WITH INTENTIONAL PRECISION.
+            © {currentYear} Sabeer-Verse. All Rights Reserved.
           </div>
 
           {/* Social connections */}
           <div className="flex gap-8">
-            {['Twitter', 'LinkedIn', 'Instagram', 'GitHub'].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="hover:text-brand-blue transition-colors uppercase tracking-widest font-bold"
-              >
-                {social}
-              </a>
-            ))}
+            <a
+              href="https://github.com/sabeerhub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-blue transition-colors uppercase tracking-widest font-bold"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/masabeer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-blue transition-colors uppercase tracking-widest font-bold"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://sabeer-ai.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-blue transition-colors uppercase tracking-widest font-bold"
+            >
+              Portfolio
+            </a>
           </div>
 
           <div className="flex items-center gap-1 text-gray-500">

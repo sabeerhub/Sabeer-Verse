@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Terminal, Lightbulb, Workflow } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 const manifestoItems = [
   {
