@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,51 +7,68 @@
 
   --color-brand-blue: #00BFFF;
   --color-brand-white: #FFFFFF;
+  --color-brand-black: #000000;
 
-  --ease-premium: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-kinetic: cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 @layer base {
   body {
     font-family: var(--font-sans);
     background-color: var(--color-brand-white);
-    color: #000000;
+    color: var(--color-brand-black);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: var(--color-brand-white);
   }
 
-  ::selection {
-    background-color: var(--color-brand-blue);
-    color: white;
-  }
-
+  /* Premium scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #fff;
+    background: var(--color-brand-black);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #eee;
-    border-radius: 10px;
+    background: #111;
+    border: 2px solid var(--color-brand-black);
+    border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #ddd;
+    background: var(--color-brand-blue);
+  }
+
+  /* Universal Selection */
+  ::selection {
+    background-color: var(--color-brand-blue);
+    color: var(--color-brand-black);
+  }
+
+  /* Custom Focus outline */
+  *:focus-visible {
+    outline: 2px solid var(--color-brand-blue);
+    outline-offset: 4px;
   }
 }
 
 @layer utilities {
   .kerning-ultra {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.06em;
+  }
+
+  .kerning-mono {
+    letter-spacing: -0.01em;
   }
 
   .text-deepskyblue {
@@ -70,20 +87,41 @@
     transition: all 0.6s var(--ease-premium);
   }
 
-  .cursor-glow {
-    width: 20px;
-    height: 20px;
-    background: var(--color-brand-blue);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.1s ease;
+  .kinetic-transition {
+    transition: all 0.8s var(--ease-kinetic);
   }
 
   .editorial-spacing {
-    line-height: 1.1;
-    margin-bottom: 2rem;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+  }
+
+  /* Subtle background dot pattern */
+  .technical-grid {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(0, 191, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 191, 255, 0.05) 1px, transparent 1px);
+  }
+
+  .technical-grid-dense {
+    background-size: 20px 20px;
+    background-image:
+      linear-gradient(to right, rgba(0, 191, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 191, 255, 0.03) 1px, transparent 1px);
+  }
+
+  /* Custom glow classes */
+  .glow-sm {
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.15);
+  }
+
+  .glow-md {
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.25);
+  }
+
+  /* Text reflection effect */
+  .text-reflect {
+    -webkit-box-reflect: below -2px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
   }
 }
