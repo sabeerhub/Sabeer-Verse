@@ -12,61 +12,66 @@ interface TechLayer {
 const techLayers: TechLayer[] = [
   {
     level: 'L1',
-    title: 'Frontend Engineering Layer',
-    description: 'Developing high-fidelity, kinetic user experiences with flawless performance and native fluid response speeds.',
-    status: 'Operational // 120 FPS',
-    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript']
+    title: 'Frontend Engineering',
+    description: 'Building fast, responsive, and accessible web applications with modern frontend technologies.',
+    status: 'Production Ready',
+    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript', 'Framer Motion']
   },
   {
     level: 'L2',
-    title: 'Backend Systems Layer',
-    description: 'Securing structural state stores, realtime synchronization channels, cloud handlers, and identity portals.',
-    status: 'Active // Quantum Secured',
-    tech: ['Firebase', 'Firestore', 'Firebase Authentication', 'Supabase', 'Node.js']
+    title: 'Backend Systems',
+    description: 'Secure backend architecture for authentication, databases, storage, and scalable cloud applications.',
+    status: 'Production Ready',
+    tech: ['Firebase Authentication', 'Cloud Firestore', 'Supabase', 'Node.js']
   },
   {
     level: 'L3',
-    title: 'Creative Design & Interaction',
-    description: 'Handcrafting blueprint layouts based on clean typographic grids and modern physics micro-damping physics.',
-    status: 'Swiss-grid Optimized',
-    tech: ['Figma', 'Framer Motion', 'GSAP', 'shadcn/ui']
+    title: 'Product Design',
+    description: 'Designing intuitive interfaces focused on clarity, usability, and exceptional user experience.',
+    status: 'Production Ready',
+    tech: ['Figma', 'shadcn/ui', 'Framer Motion', 'GSAP']
   },
   {
     level: 'L4',
-    title: 'Artificial Intelligence Stack',
-    description: 'Native execution of contextual multi-modal structures and advanced vector retrieval straight into the system flow.',
-    status: 'Cognitive Connected',
-    tech: ['OpenAI', 'Claude', 'Gemini']
+    title: 'Artificial Intelligence',
+    description: 'Integrating modern AI models into products to improve workflows and user experiences.',
+    status: 'Production Ready',
+    tech: ['OpenAI', 'Gemini', 'Claude']
   },
   {
     level: 'L5',
-    title: 'Deployment & Continuous Integration',
-    description: 'Automating build pipelines, continuous checks, and global edge CDNs for instant-loading delivery.',
-    status: 'Active // CD Global',
-    tech: ['Vercel', 'GitHub']
+    title: 'Deployment',
+    description: 'Automated deployment pipelines with reliable hosting and continuous delivery.',
+    status: 'Production Ready',
+    tech: ['GitHub', 'Vercel', 'GitHub Actions']
   }
 ];
 
 const timelineMilestones = [
   {
-    year: '24 // Q1',
-    title: 'Vortex Protocol Initialization',
-    description: 'Architected the core spatial routing engine and successfully established our first sub-15ms feedback loop.'
+    year: '2024',
+    title: 'Modern Web Development',
+    description: 'Started learning modern web development and AI-powered product development.'
   },
   {
-    year: '24 // Q3',
-    title: 'Sabeer-OS Alpha Rollout',
-    description: 'Deployed the operating system to key defense, finance, and industrial enterprise partners.'
+    year: '2025',
+    title: 'Zero Bank & FUD Health',
+    description: 'Built Zero Bank (modern digital wallet platform) and FUD Health Management System (complete healthcare management platform).'
   },
   {
-    year: '25 // Q1',
-    title: 'High-Performance Pulse Engine Release',
-    description: 'Shipped custom GPU-accelerated motion core for complex visual orchestration and real-time visualization.'
+    year: '2026',
+    title: 'TimeLux & Build-V',
+    description: 'Launched TimeLux luxury e-commerce platform and founded Build-V, a developer community focused on collaboration. Participated in the AMD Developer Hackathon.'
   },
   {
-    year: '26 // Launch',
-    title: 'Global Cognitive API Network',
-    description: 'Redesign of Sabeer-Verse public infrastructure. Unification of all systems into the ultimate Creative Intelligence Hub.'
+    year: 'Next',
+    title: 'Launch Schlverse',
+    description: 'Launch Schlverse, a modern education platform for schools.'
+  },
+  {
+    year: 'Future',
+    title: 'Ecosystem Expansion',
+    description: 'Expand the Sabeer-Verse product ecosystem with AI-powered software for businesses, education, healthcare, and fintech.'
   }
 ];
 
@@ -135,44 +140,67 @@ export default function Technology() {
                   <span className="w-2.5 h-2.5 bg-green-400 rounded-full" />
                 </div>
                 <div className="text-[10px] text-gray-400 uppercase tracking-widest">
-                  STACK_INSPECT // LAYER_0{activeLayer + 1}
+                  STACK OVERVIEW
                 </div>
               </div>
 
               {/* Dynamic Stack Output */}
-              <div className="space-y-4">
-                <div>
-                  <span className="text-brand-blue"># query</span> <span className="text-gray-400">sabeer --inspect --level={techLayers[activeLayer].level}</span>
+              <div className="space-y-4 text-xs font-mono">
+                <div className="grid grid-cols-2 gap-y-3 gap-x-4 border-b border-gray-100 pb-4">
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Framework:</span>
+                    <span className="text-gray-900 font-bold">Next.js 15</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Language:</span>
+                    <span className="text-gray-900 font-bold">TypeScript</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Database:</span>
+                    <span className="text-gray-900 font-bold">Firestore</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Authentication:</span>
+                    <span className="text-gray-900 font-bold">Firebase Auth</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Deployment:</span>
+                    <span className="text-gray-900 font-bold">Vercel</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Repository:</span>
+                    <span className="text-gray-900 font-bold">GitHub</span>
+                  </div>
                 </div>
-                <div className="text-gray-400">
-                  // Inspecting sub-system modules and real-time environment variables...
+
+                <div className="pt-2 flex justify-between items-center">
+                  <div>
+                    <span className="text-gray-400 block text-[10px] uppercase">Status:</span>
+                    <span className="text-emerald-600 font-bold">Production Ready</span>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-gray-400 block text-[10px] uppercase">Active Category:</span>
+                    <span className="text-brand-blue font-bold uppercase">{techLayers[activeLayer].title}</span>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-emerald-600">✔ SYSTEM_STATUS:</span> <span className="font-bold">{techLayers[activeLayer].status}</span>
-                </div>
-                <div>
-                  <span className="text-brand-blue font-bold">CORE_ARCH:</span> <span className="text-gray-900 font-bold">{techLayers[activeLayer].title}</span>
-                </div>
-                <div>
-                  <span className="text-brand-blue font-bold">COMPILED_TECH:</span>
-                  <div className="flex flex-wrap gap-2 mt-2">
+
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="text-[11px] leading-relaxed text-gray-500 font-sans italic">
+                    "{techLayers[activeLayer].description}"
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mt-2.5">
                     {techLayers[activeLayer].tech.map((t, idx) => (
-                      <span key={idx} className="bg-white border border-gray-200 text-gray-700 px-2.5 py-1 text-[10px] rounded-sm shadow-sm font-bold">
+                      <span key={idx} className="bg-white border border-gray-200 text-gray-700 px-2 py-0.5 text-[9px] rounded-sm font-bold">
                         {t}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-[11px] leading-relaxed text-gray-500 font-sans italic">
-                    "{techLayers[activeLayer].description}"
-                  </p>
-                </div>
               </div>
 
               {/* Watermark Matrix Grid */}
               <div className="absolute bottom-2 right-2 text-[8px] text-gray-300 uppercase tracking-widest pointer-events-none">
-                SABEER PROTOCOL // OK
+                SABEER-VERSE // COHESION
               </div>
             </div>
           </div>
@@ -187,7 +215,7 @@ export default function Technology() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {timelineMilestones.map((milestone, idx) => (
               <motion.div
                 key={idx}
