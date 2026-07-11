@@ -35,7 +35,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://sabeer-ai.vercel.app/"
+              href="https://sabeer-verse.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-gray-400 hover:text-brand-blue transition-colors uppercase tracking-widest font-bold"
