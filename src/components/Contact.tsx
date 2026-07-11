@@ -6,9 +6,10 @@ export default function Contact() {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
+    company: '',
     service: 'AI Product Development',
-    budget: '$30K - $70K',
-    message: ''
+    message: '',
+    timeline: ''
   });
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -22,16 +23,15 @@ export default function Contact() {
 
     setStatus('loading');
 
-    // Simulate high-fidelity network handshake and database replication latency
     setTimeout(() => {
       setStatus('success');
-      // Reset after success
       setFormState({
         name: '',
         email: '',
+        company: '',
         service: 'AI Product Development',
-        budget: '$30K - $70K',
-        message: ''
+        message: '',
+        timeline: ''
       });
     }, 1800);
   };
@@ -39,20 +39,10 @@ export default function Contact() {
   const services = [
     'AI Product Development',
     'SaaS Development',
-    'Web Application Development',
+    'Web Applications',
     'UI/UX Design',
     'Frontend Engineering',
-    'Firebase Development',
-    'Fintech Solutions',
-    'Healthcare Systems',
-    'Education Technology',
-    'Product Strategy'
-  ];
-
-  const budgets = [
-    '$15K - $30K',
-    '$30K - $70K',
-    '$70K+'
+    'Firebase Development'
   ];
 
   return (
@@ -104,9 +94,9 @@ export default function Contact() {
           {/* Form Column */}
           <div className="lg:col-span-7 bg-white text-black p-8 md:p-12 shadow-2xl relative">
 
-            {/* Corner Decorative Specs */}
-            <div className="absolute top-4 right-4 text-[9px] font-mono text-gray-400 tracking-wider">
-              PROTOCOL_SECURE: SSL/WSS
+            {/* Corner Title Block */}
+            <div className="absolute top-4 right-4 text-[9px] font-mono text-gray-400 tracking-wider uppercase font-bold">
+              Contact Form
             </div>
 
             <AnimatePresence mode="wait">
@@ -120,15 +110,15 @@ export default function Contact() {
                   <div className="inline-flex p-4 bg-emerald-50 text-emerald-500 rounded-full">
                     <CheckCircle2 className="w-12 h-12" />
                   </div>
-                  <h3 className="text-3xl font-bold tracking-tight uppercase kerning-ultra">Handshake Initiated</h3>
+                  <h3 className="text-3xl font-bold tracking-tight uppercase kerning-ultra">Message Sent</h3>
                   <p className="text-gray-500 max-w-md mx-auto text-sm leading-relaxed">
-                    Sabeer-Verse received your corporate dossier. Our coordination engine is scheduling your architecture review session. Expected dispatch <span className="font-mono text-brand-blue font-bold">&lt; 2 hrs</span>.
+                    Thank you for reaching out. Sabeer-Verse has received your message and we will get back to you shortly.
                   </p>
                   <button
                     onClick={() => setStatus('idle')}
                     className="text-xs font-mono uppercase tracking-widest font-bold border border-black px-6 py-3 hover:bg-black hover:text-white transition-all duration-300"
                   >
-                    Reset Connection
+                    New Message
                   </button>
                 </motion.div>
               ) : (
@@ -138,7 +128,7 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-1.5">
                       <label htmlFor="name" className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
-                        Full Name / corporate agent
+                        Full Name
                       </label>
                       <input
                         id="name"
@@ -153,7 +143,7 @@ export default function Contact() {
 
                     <div className="space-y-1.5">
                       <label htmlFor="email" className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
-                        Corporate Email
+                        Email Address
                       </label>
                       <input
                         id="email"
@@ -167,10 +157,41 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Row 2: Service Selector */}
+                  {/* Row 2: Company and Timeline */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-1.5">
+                      <label htmlFor="company" className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
+                        Company (Optional)
+                      </label>
+                      <input
+                        id="company"
+                        type="text"
+                        value={formState.company}
+                        onChange={(e) => setFormState({ ...formState, company: e.target.value })}
+                        className="w-full bg-gray-50 border border-gray-200 focus:border-brand-blue px-4 py-3 text-sm focus:outline-none transition-colors"
+                        placeholder="Sabeer-Verse"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="timeline" className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
+                        Timeline (Optional)
+                      </label>
+                      <input
+                        id="timeline"
+                        type="text"
+                        value={formState.timeline}
+                        onChange={(e) => setFormState({ ...formState, timeline: e.target.value })}
+                        className="w-full bg-gray-50 border border-gray-200 focus:border-brand-blue px-4 py-3 text-sm focus:outline-none transition-colors"
+                        placeholder="e.g. 3 months"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 3: Service Selector */}
                   <div className="space-y-2">
                     <label className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
-                      Target System / Capabilities
+                      Services
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[160px] overflow-y-auto border border-gray-100 p-2">
                       {services.map((srv) => (
@@ -193,33 +214,10 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Row 3: Budget Selector */}
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
-                      Project Allocation Pool
-                    </label>
-                    <div className="flex gap-4">
-                      {budgets.map((b) => (
-                        <button
-                          key={b}
-                          type="button"
-                          onClick={() => setFormState({ ...formState, budget: b })}
-                          className={`flex-1 text-center py-3 text-xs font-mono border transition-all duration-300 ${
-                            formState.budget === b
-                              ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold'
-                              : 'border-gray-200 bg-white text-gray-600 hover:border-gray-400'
-                          }`}
-                        >
-                          {b}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Row 4: Brief Message */}
+                  {/* Row 4: Project Details Message */}
                   <div className="space-y-1.5">
                     <label htmlFor="message" className="text-[10px] font-mono uppercase text-gray-500 tracking-wider">
-                      Project Brief / Architectural Specs
+                      Project Details
                     </label>
                     <textarea
                       id="message"
@@ -228,7 +226,7 @@ export default function Contact() {
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       className="w-full bg-gray-50 border border-gray-200 focus:border-brand-blue px-4 py-3 text-sm focus:outline-none transition-colors resize-none"
-                      placeholder="Explain what scalable design protocols or custom AI integrations your system needs..."
+                      placeholder="Tell us about your project, your goals, and how Sabeer-Verse can help."
                     />
                   </div>
 
@@ -240,7 +238,7 @@ export default function Contact() {
                       className="p-4 bg-red-50 text-red-600 text-xs font-mono flex items-center gap-2"
                     >
                       <AlertCircle className="w-4 h-4" />
-                      <span>Validation Failure: Please fill in all system specs accurately.</span>
+                      <span>Please fill in all required fields accurately.</span>
                     </motion.div>
                   )}
 
@@ -253,11 +251,11 @@ export default function Contact() {
                     {status === 'loading' ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin text-brand-blue" />
-                        <span>Compiling payload schemas...</span>
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
-                        <span>Transmit System Request</span>
+                        <span>Start a Conversation</span>
                         <Send className="w-3.5 h-3.5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       </>
                     )}
