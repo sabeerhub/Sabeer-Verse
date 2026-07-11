@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sabeer-ai.vercel.app/sitemap.xml
+Sitemap: https://sabeer-verse.vercel.app/sitemap.xml

@@ -80,7 +80,7 @@ export default function Contact() {
                   <span>View GitHub</span>
                 </a>
                 <a
-                  href="https://sabeer-ai.vercel.app/"
+                  href="https://sabeer-verse.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-center border border-white/20 hover:border-white text-white font-mono uppercase tracking-widest text-xs font-bold py-3.5 px-6 inline-flex items-center justify-center gap-2 group transition-all"

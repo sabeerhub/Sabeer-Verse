@@ -56,7 +56,7 @@ const projects: Project[] = [
     metrics: "LIVE",
     metricsLabel: "Production Status",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1200",
-    url: "https://sabeer-ai.vercel.app/",
+    url: "https://sabeer-verse.vercel.app",
     githubUrl: "https://github.com/sabeerhub"
   }
 ];
