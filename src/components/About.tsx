@@ -12,11 +12,8 @@ export default function About() {
           {/* Narrative Column - Left */}
           <div className="lg:col-span-7 space-y-12">
             <div>
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue mb-4 block">
-                The Studio // Identity
-              </span>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter kerning-ultra uppercase leading-[0.9]">
-                Building the Future with AI.
+                ABOUT
               </h2>
             </div>
 

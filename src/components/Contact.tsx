@@ -65,17 +65,10 @@ export default function Contact() {
           {/* Headline Column */}
           <div className="lg:col-span-5 space-y-10">
             <div>
-              <span className="text-xs font-mono uppercase tracking-[0.3em] text-white/70 mb-4 block">
-                Let's Build // Communication
-              </span>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter kerning-ultra uppercase leading-[0.85] text-white">
-                Let's Build <br /> Something <br /> Exceptional.
+                CONTACT
               </h2>
             </div>
-
-            <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-sm font-medium">
-              Whether you have an idea, startup, or business challenge, let's create a world-class digital product together.
-            </p>
 
             <div className="space-y-4 pt-6">
               <a

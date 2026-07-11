@@ -53,21 +53,10 @@ export default function WhySabeerVerse() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
 
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-end">
-          <div className="lg:col-span-8">
-            <span className="text-xs font-mono uppercase tracking-[0.3em] text-brand-blue mb-4 block">
-              Value Protocol // The Edge
-            </span>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter kerning-ultra uppercase leading-[0.95]">
-              Why Work With <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-blue to-white">Sabeer-Verse</span>
-            </h2>
-          </div>
-          <div className="lg:col-span-4">
-            <p className="text-gray-400 text-sm md:text-base leading-relaxed font-medium">
-              We operate at the convergence of advanced software engineering and world-class product design. No templates, no fluff.
-            </p>
-          </div>
+        <div className="mb-32">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter kerning-ultra uppercase leading-[0.95]">
+            WHY US
+          </h2>
         </div>
 
         {/* Value Matrix Grid */}
@@ -113,11 +102,6 @@ export default function WhySabeerVerse() {
                   </p>
                 </div>
 
-                {/* technical decoration footer */}
-                <div className="mt-12 pt-6 border-t border-white/5 flex justify-between items-center text-[9px] font-mono text-gray-600">
-                  <span>METRIC_BOUND: ACCURATE</span>
-                  <span>[0{index + 1} // SYS]</span>
-                </div>
               </motion.div>
             );
           })}
