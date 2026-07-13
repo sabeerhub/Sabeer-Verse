@@ -2,6 +2,11 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 
+import zeroBank from '@/assets/screenshots/zero_bank.webp';
+import fudHealth from '@/assets/screenshots/fud_health.webp';
+import timeLux from '@/assets/screenshots/timelux.webp';
+import connectCall from '@/assets/screenshots/connect_call.webp';
+
 interface Project {
   title: string;
   category: string;
@@ -18,46 +23,46 @@ const projects: Project[] = [
   {
     title: "Zero Bank",
     category: "Fintech Solution",
-    outcome: "AI-powered digital wallet for secure money transfers, transaction history, and modern banking experience.",
-    stack: ["React", "Firebase", "Tailwind CSS"],
+    outcome: "Ultra-secure digital banking core with zero-latency ledger settlements and interactive virtual card management.",
+    stack: ["React 19", "Tailwind CSS v4", "TypeScript", "Node.js"],
     metrics: "LIVE",
     metricsLabel: "Production Status",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200",
+    image: zeroBank,
     url: "https://zero-bank-phi.vercel.app/",
-    githubUrl: "https://github.com/sabeerhub"
+    githubUrl: "https://github.com/sabeerhub/Zero-Bank"
   },
   {
     title: "FUD Health Management System",
     category: "Healthcare System",
-    outcome: "A complete healthcare platform connecting administrators, doctors, pharmacists, and patients in one intelligent system.",
-    stack: ["React", "Firebase", "Tailwind CSS"],
+    outcome: "Comprehensive medical portal for Federal University Dutse, streamlining appointments and digital health records.",
+    stack: ["React", "Firebase", "Tailwind CSS", "Cloud Functions"],
     metrics: "LIVE",
     metricsLabel: "Production Status",
-    image: "https://images.unsplash.com/photo-1633167606207-d840b5070fc2?auto=format&fit=crop&q=80&w=1200",
+    image: fudHealth,
     url: "https://fud-heath.vercel.app/",
-    githubUrl: "https://github.com/sabeerhub"
+    githubUrl: "https://github.com/sabeerhub/Health-Management-system"
   },
   {
     title: "TimeLux",
     category: "Premium E-Commerce",
-    outcome: "Premium e-commerce platform for luxury watches with payment integration and a powerful admin dashboard.",
+    outcome: "Exclusive luxury timepiece storefront featuring curated global collections and secure payment integrations.",
     stack: ["Next.js", "Supabase", "Korapay", "Tailwind CSS"],
     metrics: "LIVE",
     metricsLabel: "Production Status",
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200",
+    image: timeLux,
     url: "https://timeluxy.vercel.app/",
-    githubUrl: "https://github.com/sabeerhub"
+    githubUrl: "https://github.com/sabeerhub/TimeLux"
   },
   {
-    title: "Personal Portfolio",
-    category: "System Identity",
-    outcome: "Official portfolio showcasing my experience, projects, design philosophy, and technical expertise.",
-    stack: ["React", "Tailwind CSS", "Framer Motion"],
+    title: "Connect Call Pro",
+    category: "Real-Time Systems",
+    outcome: "Next-generation communication platform leveraging WebRTC for ultra-low latency peer-to-peer video connectivity.",
+    stack: ["TypeScript", "WebRTC", "Socket.io", "Node.js"],
     metrics: "LIVE",
     metricsLabel: "Production Status",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1200",
-    url: "https://sabeer-verse.vercel.app",
-    githubUrl: "https://github.com/sabeerhub"
+    image: connectCall,
+    url: "https://connect-call-pro.vercel.app/",
+    githubUrl: "https://github.com/sabeerhub/ConnectCall-Pro"
   }
 ];
 
@@ -122,11 +127,11 @@ export default function SelectedWork() {
                 className="border-b border-gray-100 pb-12 last:border-0"
               >
                 {/* Media Column */}
-                <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden border border-gray-100 mb-6">
+                <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden border border-gray-100 mb-6 flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                   <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm text-white px-3 py-1 text-[9px] font-mono uppercase tracking-widest flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-brand-blue rounded-full" />
@@ -247,13 +252,13 @@ export default function SelectedWork() {
                   >
 
                     {/* Media Column - Parallax Offset */}
-                    <div className="lg:col-span-6 relative aspect-[16/10] bg-gray-50 overflow-hidden border border-gray-100 hover:border-brand-blue/30 transition-all duration-700">
+                    <div className="lg:col-span-6 relative aspect-[16/10] bg-gray-50 overflow-hidden border border-gray-100 hover:border-brand-blue/30 transition-all duration-700 flex items-center justify-center">
                       <motion.img
                         src={project.image}
                         alt={project.title}
                         animate={isActive ? { scale: 1.02 } : { scale: 0.98 }}
                         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                       <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm text-white px-3 py-1 text-[9px] font-mono uppercase tracking-widest flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-brand-blue rounded-full" />
